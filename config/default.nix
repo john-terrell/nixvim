@@ -38,6 +38,13 @@
 		colorcolumn = "80";
     };
 
+    keymaps = [
+		{
+			action = "<cmd>Oil<CR>";
+			key = "<leader>pv";
+		}
+	];
+
     plugins = {
       cmp = {
         enable = true;
