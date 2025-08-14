@@ -16,6 +16,23 @@
 			lsp = {
 				enable = true;
 				servers = {
+                                        clangd = {
+						enable = true;
+						settings = {
+							cmd = [
+								"clangd"
+								"--background-index"
+							];
+							filetypes = [
+								"c"
+								"cpp"
+							];
+							root_markers = [
+								"compile_commands.json"
+								"compile_flags.txt"
+							];
+						};
+         				};
 					ts_ls.enable = true;
 					lua_ls.enable = true;
 					rust_analyzer = {
@@ -41,6 +58,8 @@
 				enable = true;
 			};
 		};
+                vimAlias = true;
+                viAlias = true;
 	};
 
 
