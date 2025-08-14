@@ -3,7 +3,7 @@
   imports = [ ./bufferline.nix ];
 
   config = {
-    colorschemes.gruvbox.enable = true;
+    colorschemes.gruvbox-material-nvim.enable = true;
 
     globals = {
       mapleader = " ";
