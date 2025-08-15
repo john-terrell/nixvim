@@ -45,6 +45,11 @@
         }
         {
             mode = "n";
+            action = "<cmd>Telescope find_files<CR>";
+            key = "<leader>ff";
+        }
+        {
+            mode = "n";
             action = "<cmd>Telescope git_files<CR>";
             key = "<leader>pf";
         }
