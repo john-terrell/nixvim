@@ -45,18 +45,8 @@
         }
         {
             mode = "n";
-            action = "<cmd>Telescope find_files<CR>";
-            key = "<leader>pf";
-        }
-        {
-            mode = "n";
             action = "<cmd>Telescope git_files<CR>";
-            key = "<C-P>";
-        }
-        {
-            mode = "n";
-            action = "<cmd>Telescope grep_string({ search = vim.fn.input(\"Grep > \") })<CR>";
-            key = "<leader>ps";
+            key = "<leader>pf";
         }
         ];
 
