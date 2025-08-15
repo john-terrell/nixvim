@@ -3,7 +3,7 @@
 	imports = [ ./bufferline.nix ];
 
   config = {
-    colorschemes.gruvbox-material-nvim.enable = true;
+        colorschemes.gruvbox-material-nvim.enable = true;
 		globals = {
 			mapleader = " ";
 		};
@@ -39,18 +39,22 @@
 
 		keymaps = [
 		{
+            mode = "n";
 			action = "<cmd>Oil<CR>";
 			key = "<leader>pv";
 		}
 		{
+            mode = "n";
 			action = "<cmd>Telescope find_files<CR>";
 			key = "<leader>pf";
 		}
 		{
+            mode = "n";
 			action = "<cmd>Telescope git_files<CR>";
 			key = "<C-P>";
 		}
 		{
+            mode = "n";
 			action = "<cmd>Telescope grep_string({ search = vim.fn.input(\"Grep > \") })<CR>";
 			key = "<leader>ps";
 		}
