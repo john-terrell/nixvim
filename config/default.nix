@@ -1,9 +1,9 @@
-{ self, ... }:
+{ self, pkgs, ... }:
 {
     imports = [ ./bufferline.nix ];
 
     config = {
-        colorschemes.gruvbox-material-nvim.enable = true;
+        colorschemes.catppuccin.enable = true;
         globals = {
             mapleader = " ";
         };
@@ -34,7 +34,7 @@
 
             updatetime = 50;
 
-            colorcolumn = "80";
+            colorcolumn = "120";
         };
 
         keymaps = [
@@ -76,11 +76,11 @@
                         settings = {
                             cmd = [
                                 "clangd"
-                                    "--background-index"
+                                "--background-index"
                             ];
                             filetypes = [
                                 "c"
-                                    "cpp"
+                                "cpp"
                             ];
                             root_markers = [
                                 "compile_commands.json"
@@ -111,6 +111,31 @@
             };
             treesitter = {
                 enable = true;
+                settings = {
+                    auto_install = true;
+                    grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+                        bash
+                        c
+                        javascript
+                        json
+                        lua
+                        make
+                        markdown
+                        nix
+                        regex
+                        rust
+                        toml
+                        typescript
+                        vim
+                        vimdoc
+                        xml
+                        yaml
+                    ];
+                    hightlight = {
+                        enable = true;
+                        additional_vim_regex_highlighting = false; 
+                    };
+                };
             };
         };
         vimAlias = true;
