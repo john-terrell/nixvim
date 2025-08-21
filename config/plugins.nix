@@ -13,15 +13,16 @@
                     settings = {
                         cmd = [
                             "clangd"
-                                "--background-index"
+                            "--background-index"
                         ];
                         filetypes = [
                             "c"
-                                "cpp"
+                            "cpp"
                         ];
                         root_markers = [
                             "compile_commands.json"
-                                "compile_flags.txt"
+                            "compile_flags.txt"
+                            ".git"
                         ];
                     };
                 };
@@ -31,6 +32,11 @@
                     enable = true;
                     installCargo = true;
                     installRustc = true;
+                    settings = {
+                        root_markers = [
+                            ".git"
+                        ];
+                    };
                 };
             };
         };
