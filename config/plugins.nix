@@ -29,7 +29,7 @@
                 ts_ls.enable = true;
                 lua_ls.enable = true;
                 rust_analyzer = {
-                    enable = true;
+                    enable = false; 
                     installCargo = true;
                     installRustc = true;
                     settings = {
@@ -47,6 +47,9 @@
             enable = true;
         };
         oil = {
+            enable = true;
+        };
+        rustaceanvim = {
             enable = true;
         };
         telescope = {
