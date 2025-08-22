@@ -1,6 +1,7 @@
 { self, pkgs, ... }:
 {
     imports = [ 
+        ./autocmd.nix
         ./bufferline.nix 
         ./diagnostic.nix
         ./keymaps.nix
