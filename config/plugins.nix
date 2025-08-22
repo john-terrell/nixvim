@@ -49,9 +49,6 @@
         oil = {
             enable = true;
         };
-        rustaceanvim = {
-            enable = true;
-        };
         telescope = {
             enable = true;
         };
