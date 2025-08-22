@@ -2,6 +2,7 @@
 {
     imports = [ 
         ./bufferline.nix 
+        ./diagnostic.nix
         ./keymaps.nix
         ./options.nix
         ./plugins.nix

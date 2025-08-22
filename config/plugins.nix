@@ -1,15 +1,11 @@
 {pkgs, ...}:
 {
     plugins = {
-        cmp = {
-            enable = true;
-            autoEnableSources = true;
-        };
         lsp = {
             enable = true;
             servers = {
                 clangd = {
-                    enable = true;
+                    enable = false;
                     settings = {
                         cmd = [
                             "clangd"
@@ -26,34 +22,31 @@
                         ];
                     };
                 };
-                ts_ls.enable = true;
-                lua_ls.enable = true;
-                rust_analyzer = {
-                    enable = false; 
-                    installCargo = true;
-                    installRustc = true;
+                # Ziglang
+                zls = {
+                    enable = true;
                     settings = {
                         root_markers = [
                             ".git"
                         ];
+                        semantic_tokens = "partial";
                     };
                 };
             };
         };
+        # Provides a status line in NVIM
         lualine = {
-            enable = true;
-        };
-        luasnip = {
             enable = true;
         };
         oil = {
             enable = true;
         };
+        # Fuzzy finder plugin
         telescope = {
             enable = true;
         };
         treesitter = {
-            enable = true;
+            enable = false;
             settings = {
                 auto_install = true;
                 grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
