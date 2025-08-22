@@ -4,6 +4,7 @@
         lsp = {
             enable = true;
             servers = {
+                # C/C++
                 clangd = {
                     enable = true;
                     settings = {
@@ -46,7 +47,7 @@
             enable = true;
         };
         treesitter = {
-            enable = false;
+            enable = true;
             settings = {
                 auto_install = true;
                 grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
