@@ -5,7 +5,7 @@
             enable = true;
             servers = {
                 clangd = {
-                    enable = false;
+                    enable = true;
                     settings = {
                         cmd = [
                             "clangd"
