@@ -5,6 +5,10 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    home-manager = {
+      url = "github:nix-community/home-manager/release-25.05"; # Use your preferred release or branch
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
